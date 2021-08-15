@@ -13,7 +13,7 @@ public class ClaseDiagnosticoID implements Serializable {
     private Long id;
 
     @Column(name = "DIA_ID")
-    private Long diaId;
+    private Long diagnosticoId;
 
     //id de la tabla compuesta
 }

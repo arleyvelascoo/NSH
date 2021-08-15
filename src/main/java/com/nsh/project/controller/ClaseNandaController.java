@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/nanda")
-public class NANDAController {
+public class ClaseNandaController {
 //get one
     @GetMapping("/findById/{idNanda}")
     public ResponseEntity<?> findById(
