@@ -1,12 +1,18 @@
 package com.nsh.project.controller;
 
+import com.nsh.project.service.interfaces.IClaseNandaService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/nanda")
+@RequestMapping("/api/claseNanda")
 public class ClaseNandaController {
-//get one
+
+    private IClaseNandaService claseNandaService;
+
+    //get one
     @GetMapping("/findById/{idNanda}")
     public ResponseEntity<?> findById(
             @PathVariable(name = "idNanda") Long aIdTipoCP) {
@@ -16,7 +22,7 @@ public class ClaseNandaController {
     //get all
     @GetMapping("/findAll")
     public ResponseEntity<?> findAll() {
-        return ResponseEntity.ok(true);
+        return ResponseEntity.ok(this.claseNandaService.getAll());
     }
 
     //create one
@@ -36,5 +42,11 @@ public class ClaseNandaController {
     @DeleteMapping("{idNanda}")
     public ResponseEntity<?> deleteById(@PathVariable(name = "idNanda") Long aIdTipoCP) {
         return ResponseEntity.ok(true);
+    }
+
+    @Autowired
+    @Qualifier("claseNandaService")
+    public void setClaseNandaService(IClaseNandaService claseNandaService) {
+        this.claseNandaService = claseNandaService;
     }
 }
