@@ -13,4 +13,11 @@ public interface AgrupacionMapper {
     AgrupacionDTO toAgrupacionDTO(Agrupacion agrupacion);
 
     List<AgrupacionDTO> toAgrupacionDTOList(List<Agrupacion> agrupacionList);
+
+    //Dtos to entities
+
+    Agrupacion toAgrupacion(AgrupacionDTO tipoCaracteristicaDTO);
+
+    List<Agrupacion> toAgrupacionList(List<AgrupacionDTO> tipoCaracteristicaDTOList);
+
 }
