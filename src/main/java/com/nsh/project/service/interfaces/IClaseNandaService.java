@@ -8,4 +8,10 @@ import java.util.List;
 @Service
 public interface IClaseNandaService {
     List<ClaseNanda> getAll();
+
+    ClaseNanda createOne();
+
+    ClaseNanda updateOne();
+
+    Boolean deleteOne();
 }

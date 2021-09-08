@@ -8,4 +8,10 @@ import java.util.List;
 @Service
 public interface IDominioNandaService {
     List<DominioNanda> getAll();
+
+    DominioNanda createOne();
+
+    DominioNanda updateOne();
+
+    Boolean deleteOne();
 }

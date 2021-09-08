@@ -1,7 +1,7 @@
 package com.nsh.project.service.impl;
 
 import com.nsh.project.model.DominioNanda;
-import com.nsh.project.repositoy.IDominioNandaRepository;
+import com.nsh.project.repository.IDominioNandaRepository;
 import com.nsh.project.service.interfaces.IDominioNandaService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -20,4 +20,21 @@ public class DominioNandaServiceImpl implements IDominioNandaService {
     public List<DominioNanda> getAll(){
         return this.dominioNandaRepository.findAll();
     }
+
+    @Override
+    public DominioNanda createOne(){
+        return null;
+    }
+
+    @Override
+    public DominioNanda updateOne(){
+        return null;
+    }
+
+    @Override
+    public Boolean deleteOne(){
+        return true;
+    }
+
+
 }

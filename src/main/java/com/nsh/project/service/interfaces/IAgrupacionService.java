@@ -8,4 +8,10 @@ import java.util.List;
 @Service
 public interface IAgrupacionService {
     List<Agrupacion> getAll();
+
+    Agrupacion createOne();
+
+    Agrupacion updateOne();
+
+    Boolean deleteOne();
 }

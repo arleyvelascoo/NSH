@@ -8,4 +8,10 @@ import java.util.List;
 @Service
 public interface IClaseDiagnosticoService {
     List<ClaseDiagnostico> getAll();
+
+    ClaseDiagnostico createOne();
+
+    ClaseDiagnostico updateOne();
+
+    Boolean deleteOne();
 }

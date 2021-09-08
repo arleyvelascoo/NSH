@@ -1,7 +1,7 @@
 package com.nsh.project.service.impl;
 
 import com.nsh.project.model.Agrupacion;
-import com.nsh.project.repositoy.IAgrupacionRepository;
+import com.nsh.project.repository.IAgrupacionRepository;
 import com.nsh.project.service.interfaces.IAgrupacionService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -20,5 +20,23 @@ public class AgrupacionServiceImpl implements IAgrupacionService {
     public List<Agrupacion> getAll(){
         return this.agrupacionRepository.findAll();
     }
+
+
+    @Override
+    public Agrupacion createOne(){
+        return null;
+    }
+
+    @Override
+    public Agrupacion updateOne(){
+        return null;
+    }
+
+    @Override
+    public Boolean deleteOne(){
+        return true;
+    }
+
+
 
 }

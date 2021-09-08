@@ -1,17 +1,22 @@
 package com.nsh.project.controller;
 
+import com.nsh.project.dto.TipoCaracteristicaDTO;
+import com.nsh.project.mapper.TipoCaracteristicaMapper;
 import com.nsh.project.service.interfaces.ITipoCaracteristicaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/tipoCaracteristica")
 public class TipoCaracteristicaController {
 
     private ITipoCaracteristicaService tipoCaracteristicaService;
-
+    private TipoCaracteristicaMapper tipoCaracteristicaMapper;
 
     //get one
     @GetMapping("/findById/{idTipoCaracteristica}")
@@ -22,8 +27,11 @@ public class TipoCaracteristicaController {
 
     //get all
     @GetMapping("/findAll")
-    public ResponseEntity<?> findAll() {
-        return ResponseEntity.ok(this.tipoCaracteristicaService.getAll());
+    public ResponseEntity<List<TipoCaracteristicaDTO>> findAll() {
+        var list = this.tipoCaracteristicaService.getAll();
+        if (list == null || list.isEmpty())
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return ResponseEntity.ok(this.tipoCaracteristicaMapper.toTipoCaracteristicaDTOList(list));
     }
 
     //create one
@@ -49,5 +57,9 @@ public class TipoCaracteristicaController {
     @Qualifier("tipoCaracteristicaService")
     public void setTipoCaracteristicaService(ITipoCaracteristicaService tipoCaracteristicaService) {
         this.tipoCaracteristicaService = tipoCaracteristicaService;
+    }
+    @Autowired
+    public void setTipoCaracteristicaMapper(TipoCaracteristicaMapper tipoCaracteristicaMapper) {
+        this.tipoCaracteristicaMapper = tipoCaracteristicaMapper;
     }
 }

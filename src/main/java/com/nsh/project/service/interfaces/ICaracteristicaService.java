@@ -8,4 +8,10 @@ import java.util.List;
 @Service
 public interface ICaracteristicaService {
     List<Caracteristica> getAll();
+
+    Caracteristica createOne();
+
+    Caracteristica updateOne();
+
+    Boolean deleteOne();
 }
