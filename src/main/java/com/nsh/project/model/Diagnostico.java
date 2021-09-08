@@ -25,7 +25,7 @@ public class Diagnostico implements Serializable {
     private String nombre;
 
     @Column(name = "DESCRIPCION")
-    private String Descripcion;
+    private String descripcion;
 
     @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "diagnosticoSet")
