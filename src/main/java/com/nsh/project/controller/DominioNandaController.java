@@ -1,16 +1,22 @@
 package com.nsh.project.controller;
 
+import com.nsh.project.dto.DominioNandaDTO;
+import com.nsh.project.mapper.DominioNandaMapper;
 import com.nsh.project.service.interfaces.IDominioNandaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/dominioDominioNanda")
 public class DominioNandaController {
 
     private IDominioNandaService dominioNandaService;
+    private DominioNandaMapper dominioNandaMapper;
 
     //get one
     @GetMapping("/findById/{idDominioDominioNanda}")
@@ -21,8 +27,11 @@ public class DominioNandaController {
 
     //get all
     @GetMapping("/findAll")
-    public ResponseEntity<?> findAll() {
-        return ResponseEntity.ok(this.dominioNandaService.getAll());
+    public ResponseEntity<List<DominioNandaDTO>> findAll() {
+        var list = this.dominioNandaService.getAll();
+        if (list == null || list.isEmpty())
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return ResponseEntity.ok(this.dominioNandaMapper.toDominioNandaDTOList(list));
     }
 
     //create one
@@ -48,5 +57,9 @@ public class DominioNandaController {
     @Qualifier("dominioNandaService")
     public void setDominioNandaService(IDominioNandaService dominioNandaService) {
         this.dominioNandaService = dominioNandaService;
+    }
+    @Autowired
+    public void setDominioNandaMapper(DominioNandaMapper dominioNandaMapper) {
+        this.dominioNandaMapper = dominioNandaMapper;
     }
 }

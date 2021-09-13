@@ -1,7 +1,7 @@
 package com.nsh.project.service.impl;
 
-import com.nsh.project.model.ClaseDiagnostico;
-import com.nsh.project.repositoy.IClaseDiagnosticoRepository;
+import com.nsh.project.model.nanda.ClaseDiagnostico;
+import com.nsh.project.repository.IClaseDiagnosticoRepository;
 import com.nsh.project.service.interfaces.IClaseDiagnosticoService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -20,4 +20,21 @@ public class ClaseDiagnosticoServiceImpl implements IClaseDiagnosticoService {
     public List<ClaseDiagnostico> getAll(){
         return this.claseDiagnosticoRepository.findAll();
     }
+
+    @Override
+    public ClaseDiagnostico createOne(){
+        return null;
+    }
+
+    @Override
+    public ClaseDiagnostico updateOne(){
+        return null;
+    }
+
+    @Override
+    public Boolean deleteOne(){
+        return true;
+    }
+
+
 }
