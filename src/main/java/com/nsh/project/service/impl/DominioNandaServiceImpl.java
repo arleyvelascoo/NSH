@@ -1,6 +1,6 @@
 package com.nsh.project.service.impl;
 
-import com.nsh.project.model.DominioNanda;
+import com.nsh.project.model.nanda.DominioNanda;
 import com.nsh.project.repository.IDominioNandaRepository;
 import com.nsh.project.service.interfaces.IDominioNandaService;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,6 @@
 package com.nsh.project.service.impl;
 
-import com.nsh.project.model.ClaseDiagnostico;
+import com.nsh.project.model.nanda.ClaseDiagnostico;
 import com.nsh.project.repository.IClaseDiagnosticoRepository;
 import com.nsh.project.service.interfaces.IClaseDiagnosticoService;
 import lombok.AllArgsConstructor;

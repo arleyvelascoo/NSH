@@ -1,7 +1,7 @@
 package com.nsh.project.mapper;
 
 import com.nsh.project.dto.AgrupacionDTO;
-import com.nsh.project.model.Agrupacion;
+import com.nsh.project.model.nanda.Agrupacion;
 import org.mapstruct.Mapper;
 
 import java.util.List;

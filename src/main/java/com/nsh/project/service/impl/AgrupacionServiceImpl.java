@@ -1,6 +1,6 @@
 package com.nsh.project.service.impl;
 
-import com.nsh.project.model.Agrupacion;
+import com.nsh.project.model.nanda.Agrupacion;
 import com.nsh.project.repository.IAgrupacionRepository;
 import com.nsh.project.service.interfaces.IAgrupacionService;
 import lombok.AllArgsConstructor;

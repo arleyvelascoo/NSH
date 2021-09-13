@@ -1,6 +1,6 @@
 package com.nsh.project.service.impl;
 
-import com.nsh.project.model.Diagnostico;
+import com.nsh.project.model.nanda.Diagnostico;
 import com.nsh.project.repository.IDiagnosticoRepository;
 import com.nsh.project.service.interfaces.IDiagnosticoService;
 import lombok.AllArgsConstructor;

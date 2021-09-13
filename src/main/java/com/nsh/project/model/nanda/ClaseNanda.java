@@ -1,4 +1,4 @@
-package com.nsh.project.model;
+package com.nsh.project.model.nanda;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

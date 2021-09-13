@@ -1,7 +1,7 @@
 package com.nsh.project.mapper;
 
 import com.nsh.project.dto.DominioNandaDTO;
-import com.nsh.project.model.DominioNanda;
+import com.nsh.project.model.nanda.DominioNanda;
 import org.mapstruct.Mapper;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.nsh.project.service.impl;
 
-import com.nsh.project.model.ClaseNanda;
+import com.nsh.project.model.nanda.ClaseNanda;
 import com.nsh.project.repository.IClaseNandaRepository;
 import com.nsh.project.service.interfaces.IClaseNandaService;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,7 @@
 package com.nsh.project.mapper;
 
 import com.nsh.project.dto.ClaseNandaDTO;
-import com.nsh.project.model.ClaseNanda;
+import com.nsh.project.model.nanda.ClaseNanda;
 import org.mapstruct.Mapper;
 
 import java.util.List;

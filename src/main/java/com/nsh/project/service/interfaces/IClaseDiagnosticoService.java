@@ -1,6 +1,6 @@
 package com.nsh.project.service.interfaces;
 
-import com.nsh.project.model.ClaseDiagnostico;
+import com.nsh.project.model.nanda.ClaseDiagnostico;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

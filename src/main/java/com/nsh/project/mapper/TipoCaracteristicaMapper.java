@@ -1,7 +1,7 @@
 package com.nsh.project.mapper;
 
 import com.nsh.project.dto.TipoCaracteristicaDTO;
-import com.nsh.project.model.TipoCaracteristica;
+import com.nsh.project.model.nanda.TipoCaracteristica;
 import org.mapstruct.Mapper;
 
 import java.util.List;

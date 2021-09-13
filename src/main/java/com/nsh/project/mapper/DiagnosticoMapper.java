@@ -1,7 +1,7 @@
 package com.nsh.project.mapper;
 
 import com.nsh.project.dto.DiagnosticoDTO;
-import com.nsh.project.model.Diagnostico;
+import com.nsh.project.model.nanda.Diagnostico;
 import org.mapstruct.Mapper;
 
 import java.util.List;

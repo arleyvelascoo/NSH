@@ -1,6 +1,6 @@
 package com.nsh.project.service.impl;
 
-import com.nsh.project.model.TipoCaracteristica;
+import com.nsh.project.model.nanda.TipoCaracteristica;
 import com.nsh.project.repository.ITipoCaracteristicaRepository;
 import com.nsh.project.service.interfaces.ITipoCaracteristicaService;
 import lombok.AllArgsConstructor;
